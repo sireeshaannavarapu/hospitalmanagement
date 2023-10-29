@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import {  useGetHospitalDetailsByIdQuery,useGetAllHospitalsQuery, useGetHospitalsDetailsByidQuery } from '../../services/hospApi'
-import _from 'lodash';
+import { useGetAllHospitalsQuery, useGetHospitalsDetailsByidQuery } from '../../services/hospApi'
+import _ from 'lodash';
 function HospitalDetails(){
     var p = useParams();
-    var {isLoading,data} = useGetHospitalDetailsByIdQuery(p.id);
-    var [beds,setBeds]=useState(null)
+    var {isLoading,data} = useGetHospitalsDetailsByidQuery(p.id);
+    
     //var x = useGetHospitalsDetailsByidQuery(p.id)
     //console.log(x)
     var {isLoading,data} = useGetAllHospitalsQuery()

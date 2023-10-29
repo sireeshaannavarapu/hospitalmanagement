@@ -45,4 +45,4 @@ export const {
     useGetHospitalsDetailsByidQuery
   
  } = hospApi
- export default hospApi.reducer;
+ 
